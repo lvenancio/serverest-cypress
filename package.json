@@ -1,0 +1,19 @@
+{
+  "name": "serverest-cypress",
+  "version": "1.0.0",
+  "description": "Test automation project for the ServeRest frontend and API using Cypress.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cy:open": "cypress open",
+    "test:front": "cypress run --spec \"cypress/e2e/user-authentication.cy.js,cypress/e2e/product-management.cy.js,cypress/e2e/shopping-journey.cy.js\"",
+    "test:api": "cypress run --spec \"cypress/e2e/authentication-users-api.cy.js,cypress/e2e/product-api.cy.js,cypress/e2e/shopping-cart-api.cy.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "cypress": "^15.18.1"
+  }
+}
