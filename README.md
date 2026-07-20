@@ -67,3 +67,19 @@ cypress/downloads/
 - npm
 - ServeRest
 - Git and GitHub
+
+## Continuous Integration
+
+The project uses GitHub Actions to execute the Cypress test suites automatically.
+
+The workflow is triggered on:
+
+- Pushes to the `main` branch.
+- Pull requests targeting the `main` branch.
+- Manual execution through `workflow_dispatch`.
+
+The API and frontend test suites are executed separately using a matrix strategy. This makes it easier to identify which test group has failed.
+
+The workflow uses `npm ci` to install the exact dependency versions registered in `package-lock.json`.
+
+When a test fails, Cypress screenshots and videos are uploaded as workflow artifacts when available.
